@@ -5,7 +5,7 @@ root = tk.Tk()  # Initialize tkinter GUI
 root.title("To-Do-List App")  # Set the title name
 
 # Dimension of window and x and y position of the window ("WidthxHeight + x + y")
-root.geometry("400x650+1150+100")
+root.geometry("400x650+900+100")
 
 # Disable change of window size
 root.resizable(False, False)
