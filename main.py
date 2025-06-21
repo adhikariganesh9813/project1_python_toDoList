@@ -5,7 +5,7 @@ root = tk.Tk()  # Initialize tkinter GUI
 root.title("To-Do-List App")  # Set the title name
 
 # Dimension of window and x and y position of the window ("WidthxHeight + x + y")
-root.geometry("400x650+1150+100")
+root.geometry("400x650+900+100")
 
 # Disable change of window size
 root.resizable(False, False)
@@ -74,19 +74,19 @@ def toggle_select_all():
         listbox.select_clear(0, tk.END)  # Deselect all tasks
 
 # Icon
-appIcon = tk.PhotoImage(file="p1_to_do_list/Image/task.png")
+appIcon = tk.PhotoImage(file="Image/task.png")
 root.iconphoto(False, appIcon)  # Set icon for the root window
 
 # Top bar
-topImage = tk.PhotoImage(file="p1_to_do_list/Image/topbar.png")
+topImage = tk.PhotoImage(file="Image/topbar.png")
 tk.Label(root, image=topImage).pack()
 
 # Dock Image
-dockImage = tk.PhotoImage(file="p1_to_do_list/Image/dock.png")
+dockImage = tk.PhotoImage(file="Image/dock.png")
 tk.Label(root, image=dockImage, bg="#32405b", height=20, width=20).place(x=30, y=25)
 
 # Note Icon
-noteImage = tk.PhotoImage(file="p1_to_do_list/Image/task.png")
+noteImage = tk.PhotoImage(file="Image/task.png")
 tk.Label(root, image=noteImage, bg="#32405b").place(x=340, y=25)
 
 # Heading
@@ -103,7 +103,7 @@ checkbox_select_all = tk.Checkbutton(root, text="Select All", variable=select_al
 checkbox_select_all.place(x=10, y=200)
 
 # Entry for task input
-task_entry = tk.Entry(frame, width=30, font="arial 15", bg="#E0F7FF", bd=0)
+task_entry = tk.Entry(frame, width=20, font="arial 15", bg="#E0F7FF", bd=0)
 task_entry.place(x=10, y=7)
 task_entry.focus()  # Focus on task entry when the app opens
 
@@ -131,7 +131,7 @@ scrollbar.config(command=listbox.yview)
 openTaskFile()
 
 # Delete button to remove tasks
-Delete_icon = tk.PhotoImage(file="p1_to_do_list/Image/delete.png")
+Delete_icon = tk.PhotoImage(file="Image/delete.png")
 tk.Button(root, image=Delete_icon, bd=0, command=deleteTask).pack(side=tk.BOTTOM, pady=13)
 
 # Bind the Enter key to add a task
